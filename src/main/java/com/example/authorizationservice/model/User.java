@@ -1,8 +1,15 @@
 package com.example.authorizationservice.model;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class User {
     
+    @NotBlank
     private String name;
+    @Size(min = 4, max = 10)
+    @NotNull
     private String password;
     
     public User() {
